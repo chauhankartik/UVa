@@ -1,0 +1,1 @@
+{"name":"Local: russiandolls","url":"/home/bipolar/CppFiles/russiandolls.cpp","tests":[{"id":1619975436758,"input":"13\n25 62\n33 71\n42 38\n51 21\n61 26\n89 70\n88 87\n96 1\n63 19\n19 95\n50 39\n19 3\n84 36","output":"5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/bipolar/CppFiles/russiandolls.cpp","group":"local","local":true}

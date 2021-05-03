@@ -1,0 +1,1 @@
+{"name":"Local: reverse","url":"/home/bipolar/Downloads/CppFiles/reverse.cpp","tests":[{"id":1618744712385,"input":"5\n1\n2\n3\n4\n5","output":"5\n4\n3\n2\n1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/bipolar/Downloads/CppFiles/reverse.cpp","group":"local","local":true}

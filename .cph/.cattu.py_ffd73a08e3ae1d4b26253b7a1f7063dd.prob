@@ -1,0 +1,1 @@
+{"name":"Local: cattu","url":"/home/bipolar/Downloads/CppFiles/cattu.py","tests":[{"id":1618809280010,"input":"abccbaa","output":"aa,cc,bccb,abccba,bccbaa"},{"id":1618811477762,"input":"abcba","output":"-1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/bipolar/Downloads/CppFiles/cattu.py","group":"local","local":true}

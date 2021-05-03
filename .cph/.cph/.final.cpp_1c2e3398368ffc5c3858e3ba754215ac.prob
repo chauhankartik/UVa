@@ -1,0 +1,1 @@
+{"name":"Local: final","url":"/home/bipolar/CppFiles/.cph/final.cpp","tests":[{"id":1619421151337,"input":"5\n10 20 30 40 50","output":""},{"id":1619421212732,"input":"4\n1 5 8 7","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/bipolar/CppFiles/.cph/final.cpp","group":"local","local":true}
