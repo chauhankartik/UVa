@@ -15,12 +15,12 @@ public:
 
                 if(own) {
                         int op1 = prices[pos] + helper(pos+2, !own, prices); // sold
-                        int op2 = helper(pos+2, own, prices); // hold
+                        int op2 = helper(pos+1, own, prices); // hold
                         return dp[pos][own] = max(op1, op2);
                 }
                 else {
-                        int op1 = -(prices[pos]) + helper(pos+2, !own, prices); // buy
-                        int op2 =  helper(pos+2, own, prices);
+                        int op1 = -(prices[pos]) + helper(pos+1, !own, prices); // buy
+                        int op2 =  helper(pos+1, own, prices);
                         return dp[pos][own] = max(op1, op2);
                 }
         }
