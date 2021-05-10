@@ -40,7 +40,6 @@ public:
                                 s += new_str[j];
                         }
                 }
-                // reverse(s.begin(), s.end());
                 return s;
         }
 };
