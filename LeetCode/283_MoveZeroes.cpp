@@ -12,7 +12,7 @@ public:
                                         nums[idx] = (i+1 < n) ? nums[idx+1] : nums[idx];
                                         idx += 1;
                                 }
-                                idx -= 1;
+                                idx -= 1;       
                                 nums[idx] = 0;
                                 i -= 1;
                         }
