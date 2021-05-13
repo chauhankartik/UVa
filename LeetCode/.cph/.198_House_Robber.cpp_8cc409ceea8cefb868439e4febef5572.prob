@@ -1,0 +1,1 @@
+{"name":"Local: 198_House_Robber","url":"/home/bipolar/CppFiles/LeetCode/198_House_Robber.cpp","tests":[{"id":1620812464031,"input":"2 7 9 3 1","output":"12"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/bipolar/CppFiles/LeetCode/198_House_Robber.cpp","group":"local","local":true}
