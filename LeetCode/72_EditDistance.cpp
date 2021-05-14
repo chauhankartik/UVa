@@ -16,7 +16,7 @@ public:
 
                 if(dp[i][j] != -1) return dp[i][j];
 
-                if(a[i] == b[i]) return dp[i][j] = helper(i+1, j+1, a, b);
+                if(a[i] == b[j]) return dp[i][j] = helper(i+1, j+1, a, b);
 
                 int op1= 1 + helper(i, j+1, a, b);// insert
                 int op2= 1 + helper(i+1, j, a, b);// delete
@@ -33,7 +33,3 @@ public:
         }
 };
 
-int main() {
-
-        return 0;
-}
