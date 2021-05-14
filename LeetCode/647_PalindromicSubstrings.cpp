@@ -2,7 +2,7 @@
 using namespace std;
 
 class Solution {
-public:
+public: 
         int countSubstrings(string s) {
                 int res = 0;
                 bool dp[s.length()][s.length()];
