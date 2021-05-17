@@ -8,15 +8,18 @@ public:
                    vector<int>&       v)
         {
                 int dp[10001];
-                memset(dp, INT_MAX, sizeof dp);
+                memset(dp, -1, sizeof dp);
 
                 dp[0] = 0;
                 
                 for(int i = 1; i <= n; i++) {
                         for(int j = 0; j < v.size(); j++) {
                                 int sr = v[j];
-                                if(i - sr >= 0) {
-                                        dp[i] = min(dp[i], 1 + dp[i - sr]);
+                                if(i - sr >= 0 and dp[i - sr] != -1) {
+                                        if(dp[i] == -1)
+                                                dp[i] = 1 + dp[i - sr];
+                                        else 
+                                                dp[i] = min(dp[i], 1 + dp[i - sr]);
                                 }
                         }
                 }
