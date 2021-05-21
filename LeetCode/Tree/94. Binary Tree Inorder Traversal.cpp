@@ -1,8 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int main()
+
+
+int32_t main()
 {
-                
         return 0;
 }
