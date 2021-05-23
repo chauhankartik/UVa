@@ -10,23 +10,25 @@ struct TreeNode
 
 class Solution {
 public:
-        void helper(TreeNode *root, int low, int high, int &sum)
-        {
-                if(root!=nullptr) {
-                        if(root->left != nullptr)
-                                helper(root->left, low, high, sum);
-                        if(root->val >= low && root->val <= high) {
-                                sum += root->val;
-                                if(root->val == high) return;
+        int res = 0;
+
+        void helper(TreeNode* root, int low, int high) {
+                if(root != nullptr) {
+                        if(root->left!= nullptr) {
+                                helper(root->left, low, high);
                         }
-                        if(root->right != nullptr)
-                                helper(root->right, low, high, sum);
+                        if(root->val>= low && root->val <= high) {
+                                res += root->val;
+                                if(root->val > high) return;
+                        }
+                        if(root->right!=nullptr) {
+                                helper(root->right, low, high);
+                        }
                 }
-        }
+        }       
 
         int rangeSumBST(TreeNode* root, int low, int high) {
-                int sum = 0;
-                helper(root, low, high, sum);
-                return sum;
+                helper(root, low, high);
+                return res;
         }
 };
