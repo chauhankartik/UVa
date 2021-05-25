@@ -1,0 +1,1 @@
+{"name":"Local: Range_Minimum_Query","url":"/home/bipolar/CppFiles/Spoj/SegmentTree/Range_Minimum_Query.cpp","tests":[{"id":1621970570473,"input":"3\n1 4 1\n2\n1 1\n1 2","output":"4\n1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/bipolar/CppFiles/Spoj/SegmentTree/Range_Minimum_Query.cpp","group":"local","local":true}
