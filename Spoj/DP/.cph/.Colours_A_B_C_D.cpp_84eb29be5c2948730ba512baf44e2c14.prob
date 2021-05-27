@@ -1,0 +1,1 @@
+{"name":"Local: Colours_A_B_C_D","url":"/home/bipolar/CppFiles/Spoj/DP/Colours_A_B_C_D.cpp","tests":[{"id":1622111752757,"input":"2\nABAD","output":"BCDC"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/bipolar/CppFiles/Spoj/DP/Colours_A_B_C_D.cpp","group":"local","local":true}
