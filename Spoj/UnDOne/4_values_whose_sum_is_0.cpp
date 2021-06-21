@@ -38,6 +38,7 @@ int binary_search(int low,
 
 int32_t main() {
 
+    ios_base::sync_with_stdio(false), cin.tie(0);
     int n; cin >> n;
     vector<int> a(n), b(n), c(n), d(n);
 
@@ -64,12 +65,20 @@ int32_t main() {
 
     int low = 0, high = 0;
     int res = 0LL;
+    
     for(int i = 0; i < s1.size(); ++i) {
         low = binary_search(0, s2.size() - 1, s1[i], s2);
         high = binary_search(0, s2.size() - 1, s1[i], s2);
         res += (high * low);
     }
 
+    // for(int i = 0; i < s1.size(); ++i) {
+    //     low = lower_bound(s2.begin(), s2.end(), s1[i]) - s2.begin();
+    //     if(s2[low] == s1[i]) {
+    //         high = upper_bound(s2.begin(), s2.end(), s1[i]) - s2.begin();
+    //         res += (high - low);
+    //     }
+    // }
     cout << res << endl;
     return 0;
 }

@@ -5,26 +5,31 @@ using namespace std;
 
 vector<int> adj[N]; 
 
-queue<int> q;
+queue<pair<int, int>> q;
 int visited[N];
-int dist[N];
+int parent[N];
 
 bool bfs(int s, int max_distance) {
-        memset(visited, -1, sizeof visited);
-        visited[s] = s;
-        dist[s] = 0;
-        q.push(s);
+        if(visited[s]) return false;
+        visited[s] = 1;
+        q.push({s,max_distance});
+        parent[s] = s;
         while(!q.empty()) {
-                int x = q.front(); q.pop();
-                // process node x
-                for(auto c : adj[x]) {
-                        if(visited[c] != -1 && visited[c] != s) return false;
-                        if(visited[c] != -1 && visited[c] == s) return true;
-                        dist[c] = 1 + dist[x];
-                        if(dist[c] <= max_distance) {
-                                visited[c] = s;
+                int source = q.front().first;
+                int d = q.front().second;
+                q.pop();
+
+                if(d > 0) {
+                        for(auto u : adj[source]) {
+                                if(!visited[u]) {
+                                        visited[u] = 1;
+                                        q.push({u, d-1});
+                                        parent[u] = s;
+                                }
+                                else if(visited[u] && parent[u] != s) {
+                                        return false;
+                                }
                         }
-                        q.push(c);
                 }
         }
         return true;
@@ -43,36 +48,37 @@ int32_t main() {
                 }
 
                 vector<pair<int, int>> army;
-                for(int i = 0,_s,d; i < m; i++) {
-                        cin >> _s >> d;
-                        army.push_back({_s - 1, d});
+                for(int i = 0,city,d; i < m; i++) {
+                        cin >> city >> d;
+                        army.push_back({city-1, d});
                 }
 
                 bool res = true;
 
                 for(int i = 0; i < m; i++) {
                         res = bfs(army[i].first, army[i].second);
+                        // cout << army[i].first << " " << army[i].second << endl;
                         if(res == false) {
                                 break;
                         }
                 }
 
                 for(int i = 0; i < n; i++) {
-                        if(visited[i] == -1) res = false;
+                        if(visited[i] == 0) res = false;
                 }
 
                 if(res) {
-                        cout << "YES" << endl;
+                        cout << "Yes" << endl;
                 }
                 else {
-                        cout << "NO" << endl;
+                        cout << "No" << endl;
                 }
 
-                memset(visited, -1, sizeof visited);
+                memset(visited, 0, sizeof visited);
                 for(int i = 0; i < n; i++) {
                         adj[i].clear();
                 }
-                memset(dist, 0,sizeof dist);
+                memset(parent, 0, sizeof parent);
         }
         return 0;
 }
