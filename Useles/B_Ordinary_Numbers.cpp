@@ -4,8 +4,12 @@ using namespace std;
 
 int32_t main() {
     int t; cin >> t;
-    while(t--) {
+    while(t--) {    
         int n; cin >> n;
+        int res = 0;
+        res = min((int)9, n);
+
+        while()
     }
     return 0;
 }
