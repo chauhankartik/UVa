@@ -12,20 +12,12 @@ struct TreeNode {
 
 class Solution {
 public:
-    int sentinel = 0;
-
-    TreeNode* bstToGst(TreeNode* root) {
-        TreeNode* temp = root;
-        traverse(temp);
-        return root;
-    }
-
-    void traverse(TreeNode* root) {
-        if(root != nullptr) {
-            traverse(root->right);
-            root->val += sentinel;
-            sentinel = root->val;
-            traverse(root->left);
-        }
+    TreeNode* invertTree(TreeNode* root) {
+        if(root == nullptr) return nullptr;
+        TreeNode* r = invertTree(root->right);
+        TreeNode* l = invertTree(root->left);
+        root->left = r;
+        root->right = l;
+        return root;    
     }
 };

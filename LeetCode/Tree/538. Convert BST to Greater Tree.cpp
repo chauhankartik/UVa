@@ -12,20 +12,17 @@ struct TreeNode {
 
 class Solution {
 public:
-    int sentinel = 0;
-
-    TreeNode* bstToGst(TreeNode* root) {
-        TreeNode* temp = root;
-        traverse(temp);
+    TreeNode* convertBST(TreeNode* root) {
+        int s = 0;
+        traverse(root, s);
         return root;
     }
 
-    void traverse(TreeNode* root) {
-        if(root != nullptr) {
-            traverse(root->right);
-            root->val += sentinel;
-            sentinel = root->val;
-            traverse(root->left);
-        }
+    void traverse(TreeNode* node, int& s) {
+        if(node == nullptr) return;
+        traverse(node->right, s);
+        node->val += s;
+        s = node->val;
+        traverse(node->left, s);
     }
 };

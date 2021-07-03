@@ -24,9 +24,9 @@ public:
         if(l == r) return nullptr;
         int max_idx = findMax(nums, l, r);
 
-        TreeNode newNode (nums[max_idx], helper(nums, l, max_idx), helper(nums, max_idx + 1, r));
-        TreeNode* root = &newNode;
-        return root;
+        TreeNode* newNode  = new TreeNode(nums[max_idx], helper(nums, l, max_idx), helper(nums, max_idx + 1, r));
+        return newNode;
+        //return nullptr;
     }
 
     int findMax(vector<int>& nums, int l, int r) {
