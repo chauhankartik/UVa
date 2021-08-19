@@ -1,0 +1,1 @@
+{"name":"Local: Subarray with given sum","url":"d:\\CPP\\GFG\\Arrays\\Subarray with given sum.cpp","tests":[{"id":1629372001588,"input":"5\n1 2 3 7 5\n12","output":"2 4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CPP\\GFG\\Arrays\\Subarray with given sum.cpp","group":"local","local":true}
